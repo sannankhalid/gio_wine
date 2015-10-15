@@ -1,0 +1,194 @@
+<!-- <div class="try">
+</div> -->
+<!-- <br>
+  <br> -->
+
+
+
+
+
+  <div class="jumbotron contact_page">
+    <div class="blurb">
+      <div id="box"><hr></div>
+      <div class="flexrow center">
+        <div class="element offices_info">
+          <div class="main_office">
+            <h4><%= t('contact.mainoffice') %></h4>
+            <p>5580 La Jolla Blvd. #396</p>
+            <p>La Jolla, CA</p>
+            <p>92037</p>
+            <br>
+            <p>
+              <span class="glyphicon glyphicon-earphone"></span> +1 858 452 7499
+            </p>
+            <p>
+              <span class="glyphicon glyphicon-print"></span> +1 858 452 2820
+            </p>
+          </div>
+        </div>
+        <div class="element offices_info">
+          <div class="other_offices">
+            <h4 class="center">R<%= t('contact.reachotheroffices') %></h4>
+            <p class="center">
+              <strong>Argentina</strong> <span class="glyphicon glyphicon-earphone"> </span> +54 9261 6967053
+            </p>
+            <p class="center">
+              <strong>Brazil</strong> <span class="glyphicon glyphicon-earphone"></span> +55 69 8126 3974
+            </p>
+            <p class="center">
+              <strong>Cayman</strong> <span class="glyphicon glyphicon-earphone"></span> +1 345 323 3238
+            </p>
+            <p class="center">
+              <strong>Florida, USA</strong> <span class="glyphicon glyphicon-earphone"></span> +1 786 246 5536
+            </p>
+            <p class="center">
+              <strong>Guatemala</strong> <span class="glyphicon glyphicon-earphone"></span> +502 5216 9641
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="container">
+          <p class="center">
+            <strong>
+              <%= t('contact.forgeneralqs') %><a href="mailto:info@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Hello, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc." id="black" class="hvr-underline-from-center">info@giowine.com</a>
+            </strong>
+          </p>
+        </div>
+      </div>
+      <br>
+    <div id="box">
+      <hr>
+      <h2><%= t('contact.meetourteam') %></h2>
+    </div>
+    <div class="team">
+      <p>
+      <%= t('contact.team') %>
+      </p>
+    </div>
+    <br>
+    <div class="teammembers">
+      <br>
+      <div class="flexrow center">
+        <% people = [
+          {
+            picture: 'contacts/giovanni.jpg',
+            name: 'Giovanni Cardullo',
+            title: 'President',
+            mail: {
+              link: "mailto:giovanni@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Giovanni, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'giovanni@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/ricardo.jpg',
+            name: 'Ricardo March',
+            title: 'Vice President',
+            mail: {
+              link: "mailto:ricardo@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Ricardo, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'ricardo@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/colleen2.jpg',
+            name: 'Colleen N. Clayton',
+            title: 'Area Manager for South America',
+            mail: {
+              link: "mailto:colleen@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Colleen, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'colleen@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/flavio.jpg',
+            name: 'Flavio Andreatta',
+            title: 'Area Manager for the Caribbean',
+            mail: {
+              link: "mailto:flavio@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Flavio, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'flavio@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/hermann2.jpg',
+            name: 'Hermann Bendfeldt',
+            title: 'Area Manager for Central America, Colombia and Peru',
+            mail: {
+              link: "mailto:hermann@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Hermann, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'hermann@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/vincenzo.jpg',
+            name: 'Vincenzo Protti',
+            title: 'Area Manager for Brazil',
+            mail: {
+              link: "mailto:vincenzo@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Vincenzo, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'vincenzo@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/stefano.jpg',
+            name: 'Stefano Poggi',
+            title: 'Area Manager for USA: Central and West Coast',
+            mail: {
+              link: "mailto:stefano@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Stefano, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'stefano@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/carlo.jpg',
+            name: 'Carlo Anthony Guzman',
+            title: 'Brand Manager for USA West Coast',
+            mail: {
+              link: "mailto:carlo@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Carlo, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'carlo@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/elisabetta.jpg',
+            name: 'Elisabetta Levrini',
+            title: 'Financial Manager',
+            mail: {
+              link: "mailto:marketing@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Elisabetta, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'marketing@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/patricia.jpg',
+            name: 'Patricia Mancero',
+            title: 'Executive Assistant',
+            mail: {
+              link: "mailto:info@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Patricia, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'info@giowine.com'
+            }
+          },
+          {
+            picture: 'contacts/sara.jpg',
+            name: 'Sara Cardullo',
+            title: 'Brand Manager French Wines',
+            mail: {
+              link: "mailto:sara@giowine.com?cc=info@giowine.com.com&subject=More%20information%20about%20Giowine&body=Dear Sara, %0A%0AI came across your website and I'm interested in more information about Giovanni Cardullo, Inc.",
+              email: 'sara@giowine.com'
+            }
+          },
+
+          ]  %>
+          <% people.each do |person| %>
+          <div class="element">
+            <div class="contact">
+              <%= image_tag person[:picture] %>
+              <p class="bold"><%= person[:name] %> <a href="<%= person[:mail][:link] %>"> <i class="fa fa-envelope-o hvr-icon-grow-rotate"></i><%= person[:mail][:mail] %></a></p>
+              <p class="person_title"><%= person[:title] %></p>
+            </div>
+          </div>
+          <% end %>
+        </div><!-- /row-->
+      </div><!-- /container-->
+    </div> <!-- /blurb >-->
+  </div> <!-- /jumbotron >-->
+
+
+  <%= stylesheet_link_tag 'contact',
+  '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
+  media: 'all' %>
+  <%= javascript_include_tag 'contact', media: 'all' %>

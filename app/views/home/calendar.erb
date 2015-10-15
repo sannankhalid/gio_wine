@@ -1,0 +1,91 @@
+
+<div class="container center">
+  <h2 class="bold">Join us at one of our events!</h2>
+</div>
+
+<br>
+<br>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-6">
+
+        <!-- CAROUSEL-->
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= image_tag('test/test.jpg', alt: 'Try') %>
+              <div class="carousel-caption">
+                We like wine
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag('test/test2.jpg', alt: 'Try') %>
+              <div class="carousel-caption">
+                here at giowine
+              </div>
+            </div>
+            <div class="item">
+              <%= image_tag('test/test3.jpg', alt: 'Try') %>
+              <div class="carousel-caption">
+                yes we do
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <!-- /END CAROUSEL -->
+
+
+
+      </div>
+      <div class="col-md-6">
+        <%= image_tag('test/calendar.jpg', alt: 'calendar') %>
+      </div>
+    </div><!-- /row -->
+
+    <div class="row">
+      <p class="center">months/archives/years (something along these lines)</p>
+    </div><!-- /row -->
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="article">
+          <p>IMAGE</p>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="article">
+          <p>Date</p>
+          <p>Name of event</p>
+          <p>Description</p>
+          <p>Should we be able to filter by country or type of event?</p>
+        </div>
+      </div>
+
+
+    </div><!-- /row -->
+  </div><!-- /jumbotron -->
+</div><!-- /container -->
+<%= stylesheet_link_tag 'calendar',    media: 'all' %>
+<%= javascript_include_tag 'calendar', media: 'all' %>

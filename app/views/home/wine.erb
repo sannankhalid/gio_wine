@@ -1,0 +1,683 @@
+<div class="jumbotron">
+  <div class="blurb">
+    <div class="row">
+      <div class="col-md-5 col-xs-12">
+
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs green" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#wines" aria-controls="wines" role="tab" data-toggle="tab"><h2><%= t('wine.tabwine') %></h2></a>
+            </li>
+            <li role="presentation">
+              <a href="#foods" aria-controls="foods" role="tab" data-toggle="tab"><h2><%= t('wine.tabfood') %></h2></a>
+            </li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="wines">
+              <br>
+              <p><%= t('wine.winedescription') %></p>
+              <br>
+              <div id="the_wines" class="row font">
+                <div class="col-xs-6">
+                  <p class="bold hvr-underline-from-center" data-name="batasiolo" >Batasiolo</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="casale" >Casale del Giglio</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="casanova" >Casanova di Neri</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="monaci" >Castello Monaci</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="cecchi" >Cecchi</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="fantinel" >Fantinel</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="farnese" >Fantini</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="fontana" >Fontana Candida </p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="roncaia" >La Roncaia</p>
+                </div>
+                <div class="col-xs-6">
+                  <p class="bold hvr-underline-from-center" data-name="maschio" >Maschio</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="masi" >Masi</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="mazzei" >Mazzei</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="planeta" >Planeta</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="riunite" >Riunite</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="vesevo" >Vesevo</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="salento" >Vigneti del Salento</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="vulture" >Vigneti del Vulture</p>
+                  <br>
+                  <p class="bold hvr-underline-from-center" data-name="lazzaroni" >Lazzaroni</p>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="foods">
+              <br>
+              <p><%= t('wine.fooddescription') %></p>
+              <br>
+              <div id="the_foods" class="row font">
+                <p class="hvr-underline-from-center" data-name="amaretti" >Amaretti del Chiostro</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="ferrarelle" >Ferrarelle Acqua Minerale</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="mutti" >Mutti Solo Pomodoro</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="olio" >Planeta Olio d'Oliva</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="rustichella" >Rustichella Pasta Artigianale</p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="col-md-7 col-xs-12">
+        <div id="map2"></div>
+        <caption>
+          <div id="spacing">
+            <i><%= t('wine.infomarker') %></i>
+          </div>
+        </caption>
+      </div>
+
+
+      <!--Modals-->
+
+<%
+modals = [
+{ id:   'myModal',
+  title:'PLANETA',
+  body:[{
+    html: %W(
+        #{ ERB.new(t('wine.modals.planeta')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.planeta')[0][:caption],
+    quote: t('wine.modals.planeta')[0][:quote]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.planeta')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/planeta.png',
+    alt: 'Planeta logo'
+  },
+  link: t('wine.modals.planeta.link')
+},
+{ id:   'myModal2',
+  title:'BATASIOLO',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.batasiolo')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.batasiolo')[0][:caption],
+    quote: t('wine.modals.batasiolo')[0][:quote],
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.batasiolo')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/batasiolo.jpg',
+    alt: 'Batasiolo logo'
+  },
+  link: t('wine.modals.batasiolo.link')
+  },
+{ id:   'myModal3',
+  title:'MASCHIO',
+  body:[{
+    html: %W(
+          #{ ERB.new(t('wine.modals.maschio')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.maschio')[0][:caption],
+    quote: t('wine.modals.maschio')[0][:quote],
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.maschio')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/maschio.png',
+    alt: 'Cantine Maschio logo'
+  },
+  link:t('wine.modals.maschio.link')
+},
+{ id:   'myModal4',
+  title:'MAZZEI',
+  body:[{
+    html: %W(
+        #{ ERB.new(t('wine.modals.mazzei')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.mazzei')[0][:caption],
+    quote: t('wine.modals.mazzei')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.mazzei')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/mazzei.png',
+    alt: 'Mazzei logo'
+  },
+  link: t('wine.modals.mazzei.link')
+},
+{ id:   'myModal5',
+  title:'FANTINI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.fantini')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.fantini')[0][:caption],
+    quote: t('wine.modals.fantini')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.fantini')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/fantini.png',
+    alt: 'Farnese logo'
+  },
+  link: t('wine.modals.fantini.link')
+},
+{ id:   'myModal6',
+  title:'FANTINEL',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.fantinel')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.fantinel')[0][:caption],
+    quote: t('wine.modals.fantinel')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.fantinel')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/fantinel.png',
+    alt: 'Fantinel logo'
+  },
+  link: t('wine.modals.fantinel.link')
+},
+{ id:   'myModal7',
+  title:'RIUNITE',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.riunite')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.riunite')[0][:caption],
+    quote: t('wine.modals.riunite')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.riunite')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/riunite.png',
+    alt: 'Cantine Riunite logo'
+  },
+  link: t('wine.modals.riunite.link')
+},
+{ id:   'myModal8',
+  title:'CASANOVA DI NERI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.casanovadineri')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.casanovadineri')[0][:caption],
+    quote: t('wine.modals.casanovadineri')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.casanovadineri')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/casanova.png',
+    alt: 'Casanova di Neri logo'
+  },
+  link: t('wine.modals.casanovadineri.link')
+},
+{ id:   'myModal9',
+  title:'MASI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.masi')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.masi')[0][:caption],
+    quote: t('wine.modals.masi')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.masi')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/masi.png',
+    alt: 'Masi logo'
+  },
+  link: t('wine.modals.masi.link')
+},
+{ id:   'myModal10',
+  title:'LAZZARONI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.lazzaroni')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.lazzaroni')[0][:caption],
+    quote: t('wine.modals.lazzaroni')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.lazzaroni')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/lazzaroni.jpg',
+    alt: 'Lazzaroni logo'
+  },
+  link: t('wine.modals.lazzaroni.link')
+},
+{ id:   'myModal11',
+  title:'CASALE DEL GIGLIO',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.casaledelgiglio')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.casaledelgiglio')[0][:caption],
+    quote: t('wine.modals.casaledelgiglio')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.casaledelgiglio')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/casale.png',
+    alt: 'Casale Del Giglio Logo'
+  },
+  link: t('wine.modals.casaledelgiglio.link')
+},
+{ id:   'myModal12',
+  title:'CECCHI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.cecchi')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.cecchi')[0][:caption],
+    quote: t('wine.modals.cecchi')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.cecchi')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/cecchi.jpg',
+    alt: 'Cecchi logo'
+  },
+  link: t('wine.modals.cecchi.link')
+},
+{ id:   'myModal13',
+  title:'VESEVO',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.vesevo')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.vesevo')[0][:caption],
+    quote: t('wine.modals.vesevo')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.vesevo')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/vesevo.png',
+    alt: 'Vesevo logo'
+  },
+  link: t('wine.modals.vesevo.link')
+},
+{ id:   'myModal14',
+  title:'RUSTICHELLA',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.rustichella')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.rustichella')[0][:caption],
+    quote: t('wine.modals.rustichella')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.rustichella')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/rustichella.png',
+    alt: 'Rustichella logo'
+  },
+  link: t('wine.modals.rustichella.link')
+},
+{ id:   'myModal15',
+  title:'FERRARELLE',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.ferrarelle')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.ferrarelle')[0][:caption],
+    quote: t('wine.modals.ferrarelle')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.ferrarelle')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/ferrarelle.png',
+    alt: 'Ferrarelle logo'
+  },
+  link: t('wine.modals.ferrarelle.link')
+},
+{ id:   'myModal17',
+  title:'AMARETTI DEL CHIOSTRO',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.amarettidelchiostro')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.amarettidelchiostro')[0][:caption],
+    quote: t('wine.modals.amarettidelchiostro')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.amarettidelchiostro')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/chiostro.png',
+    alt: 'Amaretti del Chiostro logo'
+  },
+  link: t('wine.modals.amarettidelchiostro.link')
+},
+{ id:   'myModal18',
+  title:'PLANETA OLIVE OIL',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.planetaoliveoil')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.planetaoliveoil')[0][:caption],
+    quote: t('wine.modals.planetaoliveoil')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.planetaoliveoil')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/planeta.png',
+    alt: 'Planeta logo'
+  },
+  link: t('wine.modals.planetaoliveoil.link')
+},
+{ id:   'vulture',
+  title:'VIGNETI DEL VULTURE',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.vignetidelvulture')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.vignetidelvulture')[0][:caption],
+    quote: t('wine.modals.vignetidelvulture')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.vignetidelvulture')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+  logo:{
+    src: 'brands/vulture.jpg',
+    alt: 'Vigneti del Vulture logo'
+  },
+  link: t('wine.modals.vignetidelvulture.link')
+},
+{ id:   'fontana',
+  title:'FONTANA CANDIDA',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.fontanacandida')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.fontanacandida')[0][:caption],
+    quote: t('wine.modals.fontanacandida')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.fontanacandida')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+logo:{
+  src: 'brands/fontana.jpg',
+  alt: 'Fontana Candida logo'
+},
+  link: t('wine.modals.fontanacandida.link')
+},
+{ id:   'monaci',
+  title:'CASTELLO MONACI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.castellomonaci')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.castellomonaci')[0][:caption],
+    quote: t('wine.modals.castellomonaci')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.castellomonaci')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+logo:{
+  src: 'brands/monaci.jpg',
+  alt: 'Casetllo Monaci logo'
+},
+  link: t('wine.modals.castellomonaci.link')
+},
+{ id:   'salento',
+  title:'VIGNETI DEL SALENTO',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.vignetidelsalento')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.vignetidelsalento')[0][:caption],
+    quote: t('wine.modals.vignetidelsalento')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.vignetidelsalento')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+logo:{
+  src: 'brands/salento.jpg',
+  alt: 'Vigenti del Salento logo'
+},
+  link: t('wine.modals.vignetidelsalento.link')
+},
+{ id:   'mutti',
+  title:'MUTTI',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.mutti')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.mutti')[0][:caption],
+    quote: t('wine.modals.mutti')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.mutti')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+],
+logo:{
+  src: 'brands/mutti.jpg',
+  alt: 'Mutti logo'
+},
+link: t('wine.modals.mutti.link')
+},
+{ id:   'myModal16',
+  title:'LA RONCAIA',
+  body:[{
+    html: %W(
+      #{ ERB.new(t('wine.modals.laroncaia')[0][:html]).result(binding) }
+      ).join(' '),
+    caption: t('wine.modals.laroncaia')[0][:caption],
+    quote: t('wine.modals.laroncaia')[0][:caption]
+  },
+  {
+    html:%W(
+      #{ ERB.new(t('wine.modals.laroncaia')[1][:html]).result(binding) }
+    ).join(' '),
+ },
+  ],
+  logo:{
+    src: 'brands/laroncaia.png',
+    alt: 'La Roncaia logo'
+  },
+link: t('wine.modals.laroncaia.link')
+},
+]
+%>
+
+<% modals.each_with_index do |modal, count| %>
+<div class="modal fade" id="<%= modal[:id] %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel"><%= modal[:title] %></h4>
+      </div>
+      <div class="modal-body">
+
+        <div id="myCarousel-<%= count %>" class="carousel slide carousel-fit" data-ride="carousel" data-interval="false">
+          <!-- Indicators -->
+          <% if modal[:body].length > 1 %>
+          <ol class="carousel-indicators">
+            <% modal[:body].each_with_index do |item, index| %>
+            <li data-target="#myCarousel-<%= count %>" data-slide-to="<%= index %>" class="<%= 'active' if (index == 0) %>"></li>
+            <% end %>
+          </ol>
+          <% end %>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <% modal[:body].each_with_index do |item, index| %>
+            <div class="item <%= 'active' if (index == 0) %>">
+              <div class="item_content">
+                <%= item[:html].html_safe %>
+                <% unless item[:caption].nil? || item[:caption].empty? %>
+                <p class="caption">
+                  <%= item[:caption] %>
+                </p>
+                <% end %>
+                <% unless item[:quote].nil? || item[:quote].empty? %>
+                <blockquote>
+                  <p>
+                    <%= item[:quote] %>
+                  </p>
+                </blockquote>
+                <% end %>
+                <div class="spacing"></div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+          <!-- Controls -->
+          <% if modal[:body].length > 1 %>
+          <a class="left carousel-control" href="#myCarousel-<%= count %>" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel-<%= count %>" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          <% end %>
+          </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <%= image_tag modal[:logo][:src], alt: modal[:logo][:alt] %>
+        <a href="<%= modal[:link] %>" target="_blank">
+          <button type="button" class="btn btn-default">
+            View Website
+          </button>
+        </a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+</div><!-- /row -->
+</div><!--/end blurb-->
+</div><!-- /Jumbotron -->
+
+<%= stylesheet_link_tag '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css',
+'leaflet.awesome-markers',
+'bootstrap-modal-carousel',
+'wine',
+media: 'all' %>
+<%= javascript_include_tag  '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js',
+'leaflet.awesome-markers',
+'leaflet.smoothmarkerbouncing',
+'underscore-min',
+'bootstrap-modal-carousel',
+'wine',
+media: 'all' %>

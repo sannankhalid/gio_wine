@@ -1,0 +1,408 @@
+es:
+  wine:
+    tabwine: WINE
+    tabfood: FOOD
+    winedescription: |-
+      GioWine represents a varied portfolio of nationally renowned quality
+      Italian wines from all over the country. Each region of Italy embodies a
+      unique character due to the diverse micro climates, the particularly adapted
+      grape varieties, and the traditional regional styles of wine-making. You can
+      learn more by exploring our map and clicking on the icons.  Brand information
+      comes straight from the producer, for a closer look we invite you to check out
+      their websites!
+    fooddescription: |-
+      We represent a focused and rich collection of food products and non-alcoholic
+      beverages including Italy's number one sparkling water, choice artisinal pasta
+      of top international chefs, olive oil cultivated on the Sicilian seaside, and
+      the original amaretti cookies since the 1700s. Buon appetito!
+    infomarker: Each marker on this map of Italy represents one of our producers.
+    modals:
+      planeta:
+        link: "http://www.planeta.it/"
+        0:
+          html: "<%= image_tag('winery/planeta.jpg', alt:'Planeta Winery') %>"
+          caption: "A bottle of Planeta Chardonny ready for tasting | Region: Sicilia"
+          quote: |-
+            Planeta represents not just one, but six ways of developing the territory,
+            in six different settings between Sambuca di Sicilia and Menfi: there are
+            six Planeta wine producing estates, each one with a specific research and
+            development project.
+        1:
+          html: |-
+            <h4> <i>Featured Product:</i> Chardonnay DOC</h4>
+            <%= image_tag('featured/planeta.jpg', alt:'Planeta\'s Chardonnay DOC', :class => 'featured') %>
+            <p><strong>Grape Varieties:</strong> 100% Chardonnay</p>
+            <p><strong>Tasting Note:</strong> Deep gold in color, crisp and creamy on the palate, this soft, round white is supported by refreshing acidity. Mineral undertones complement flavors of ripe yellow peaches, acacia honey, and almond paste. With bold toasted and cereal aromas, this wine has a long and balanced finish. </p>
+            <p><strong>Awards:</strong> <i>2010 vintage</i> Chardonnay du Monde 2012 - Gold Medal</p>
+      batasiolo:
+        link: "http://www.batasiolo.com/"
+        0:
+          html: "<%= image_tag('winery/harvest.jpg', alt:'Batasiolo Winery') %>"
+          caption: "Harvest time at the Batasiolo vineyards | Region: Piemonte"
+          quote: |-
+            In the old local dialect the word 'beni' means a property or estate,
+            and it is this idea of the unbreakable bond existing between the farmer
+            and his vineyard which is encapsulated in the name 'Beni di Batasiolo.'
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Barolo DOCG</h4>
+            <%= image_tag("featured/batasiolo.jpg", alt:"Batasiolo's Barolo DOCG", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Nebbiolo</p>
+            <p><strong>Tasting Note:</strong> Deep garnet red color. The bouquet has all the typical aromas of the nebbiolo grape, showing dried fruit, flowers, spices, and typical delicate herbaceous aromas. In the mouth, the perfect balance between tannins, freshness, and alcoholic content offer truly powerful sensations. Elegant and pleasing. </p>
+            <p><strong>Awards:</strong> <i>2010 Vintage:</i> 93 points, Editor's Choice for Wine Enthusiast</p>
+      maschio:
+        link: 'http://www.cantinemaschio.it/en'
+        0:
+          html: |-
+            <iframe width="100%" height="375" src="https://www.youtube.com/embed/vd-MMShhxRs" frameborder="0" allowfullscreen></iframe>
+          caption: |-
+            Maschio's 2012 commercial for their Pinot Rosa wine, giving tasters a "sparkling moment" | Region: Veneto
+          quote: |-
+            These are products that satisfy even the most demanding palates at the most particular moments.
+            For over 40 years Maschio has been a synonym of quality and a guarantee of success.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Prosecco DOCG Valdobbiadene Rive di Colbertaldo</h4>
+            <%= image_tag("featured/maschio.jpg", alt:"Maschio's Prosecco DOCG Valdobbiadene", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Glera. Brut.</p>
+            <p><strong>Tasting Note:</strong> Bright straw yellow color with a creamy mousse. The nose includes  sweet floral notes of wisteria, along with fruity pear and apricot tones. Mellow and fruity taste with hints of pineapple and melon. </p>
+      mazzei:
+        link: 'http://www.mazzei.it/eng_intro/no_intro:1'
+        0:
+          html: |-
+            <%= image_tag("winery/mazzei.jpg", alt:"Mazzei Winery") %>
+          caption: |-
+            The Mazzei vineyards are visible from the village of Gelso | Region: Toscana
+          quote: |-
+            Today, after almost six centuries, the Mazzei family still devotes itself to winemaking,
+            with constant commitment, an eye towards innovation, and an abiding respect for the land.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Marchesi Castello di Fonterutoli Siepi Toscana IGT</h4>
+            <%= image_tag("featured/mazzei.jpg", alt:"Mazzei's Siepi IGT", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong>  50% Merlot, 50% Sangiovese</p>
+            <p><strong>Tasting Note:</strong>  Deep ruby red color with purple highlights, intense aromas of ripe blackberries and dark cherries, accented by notes of mint and wild herbs, highly concentrated, with sweet, dense tannins and a lush, velvety texture; dark berry fruit flavors mingle with notes of toast and spice. Grown in Fonterutoli’s Siepi single vineyard, Castellina in Chianti, Tuscany.  </p>
+            <p><strong>Awards:</strong> <i>2010 Vintage:</i> Gambero Rosso - 3 bicchieri; "One of the 50 wines that changed Italy's wine style" - Gambero Rosso; Robert Parker 95 points</p>
+      fantini:
+        link: 'http://www.farnesevini.it'
+        0:
+          html: |-
+            <%= image_tag("winery/farnese.jpg", alt:"Fantini Winery") %>
+          caption: |-
+            The Fantini Farnese vineyard is located in the beautiful Cupa valley | Region: Abruzzo
+          quote: |-
+            The wines from Abruzzo became famous worldwide in the 16th century, thanks to Princess
+            Margaret of Austria and Prince Farnese, who began producing high quality wines which were
+            enjoyed at feasts throughout Europe. The Farnese group carry on this reputation and tradition
+            with advanced programs of production and marketing.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Montepulciano d'Abruzzo DOCG</h4>
+            <%= image_tag("featured/fantini.jpg", alt:"Fantini's Montepulciano d'Abruzzo DOCG", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong>  100% Montepulciano d'Abruzzo</p>
+            <p><strong>Tasting Note:</strong> Ruby red with garnet highlights. Intense, persistent and fruity (red fruit, “marasca”, plum) with hints of vanilla. Full bodied, well balanced, slightly tannic and long-lasting. </p>
+            <p><strong>Awards:</strong> <i>2012 vintage:</i> Mundus Vini - Gold Medal </p>
+      fantinel:
+        link: 'http://www.fantinel.com/en/entry.aspx'
+        0:
+          html: |-
+            <iframe width="100%" height="375" src="https://www.youtube.com/embed/9CgG8egegHA" frameborder="0" allowfullscreen></iframe>
+          caption: |-
+            A video made by Fantinel winery: "Feel the Emotion" | Region: Friuli Venezia Giulia
+          quote: |-
+            For over four decades, passion has been the driving force of Fantinel, a group of
+            technicians and professionals who work every day with diligence and enthusiasm to
+            create a range of wines able to offer strong emotions that are imprinted in memory.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Prosecco 'One & Only' Prosecco DOC</h4>
+            <%= image_tag("featured/fantinel.jpg", alt:"Fantinel's Prosecco 'One & Only'", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong>  100% Glera. Vinified using the charmant method. Brut.</p>
+            <p><strong>Tasting Note:</strong>  This is the new Fantinel vintage Prosecco, born from single- vineyard grapes, the highest expression of the company quality. It has a light straw yellow colour, a refined fragrance with elegant floral notes, a captivating and velvety flavour.</p>
+      riunite:
+        link: 'http://www.riunite.com'
+        0:
+          html: |-
+            <%= image_tag("winery/riunite.jpg", alt:"Riunite Winery") %>
+          caption: |-
+            The celebrated Lambrusco grape variety indigenous to the region | Region: Emilia Romagna
+          quote: |-
+            Riunite is most closely identified with the Lambrusco grape, a variety native to central Italy.
+            Lambrusco is said to be one of the oldest grapes in history, one that was first vinified by
+            the Etruscans, dating back to before the first century BC. When you are drinking Riunite,
+            you are drinking history.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Lambrusco IGT</h4>
+            <%= image_tag("featured/riunite.jpg", alt:"Riunite's Lambrusco IGT", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Lambrusco</p>
+            <p><strong>Tasting Note:</strong> Wine expresses rich red fruit aromas and flavors, a slightly sweet character and a subtle sparkle for added joy. </p>
+      casanovadineri:
+        link: 'http://www.casanovadineri.it/en-index.html'
+        0:
+          html: |-
+            <%= image_tag("winery/Cneri_087.jpg", alt:"Casanova di Neri Winery") %>
+          caption: |-
+            Harvested grapes ready for vinification | Region: Toscana
+          quote: |-
+            High quality vines, and rigorous, careful work in the cellar have lead to the production
+            of unique wines with great character and well defined styles.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Brunello di Montalcino DOCG Tenuta Nuova</h4>
+            <%= image_tag("featured/casanova.jpg", alt:"Casanova di Neri's Brunello di Montalcino DOCG Tenuta Nuova", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong>  100% Sangiovese </p>
+            <p><strong>Tasting Note:</strong> Ruby red with garnet reflections, hints of maraschino cherries, violets and red frits. Great fineness in the mouth with a tannin still young yet of great quality. Long, elegant, and persistent.</p>
+            <p><strong>Awards:</strong> <i>2010 vintage:</i> 100 points Robert Parker</p>
+      masi:
+        link: 'http://www.masi.it/eng/home'
+        0:
+          html: |-
+            <%= image_tag("winery/masi.jpg", alt:"Appassimento at Masi Winery") %>
+          caption: |-
+            The "appassimento" process (to dry and shrivel) is used to make Masi's famed Amarone wine | Region: Veneto
+          quote: |-
+            Masi is proud to be a worldwide ambassador of the Venetian culture and values expressed throughout
+            the territory and in their wine.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Costasera Amarone Classico DOCG</h4>
+            <%= image_tag("featured/masi.jpg", alt:"Masi's Costasera Amarone Classico DOCG", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> Corvina, Rondinella, and Molinara (traditional grapes for the Valpolicella Classica) </p>
+            <p><strong>Tasting Note:</strong> The product of Masi's unrivalled expertise in the appassimento technique, whereby grapes are laid out on bamboo racks to concentrate their aromas during the winter months, is used for the production of the Costasera Amarone Classico. Proud, majestic, complex and exuberant: this is Masi's gentle giant. </p>
+            <p><strong>Awards:</strong> <i>2010 Vintage:</i> International Wine Challenge 2014, UK silver medal</p>
+      lazzaroni:
+        link: 'http://www.lazzaroni.it'
+        0:
+          html: |-
+            <%= image_tag("winery/lazzaroni_2.jpg", alt:"Amaretto Lazzaroni") %>
+          caption: |-
+            Unique amaretto liquer made by infusion of Amaretti di Saronno cookies.| Region: Lombardia
+          quote: |-
+            Made from the original secret formula created in 1851 by Palol and Davide Lazzaroni in Saronno, Italy. Discover
+            the 'Authentic Liquore Amaretto' straight, on the rocks at the end of a meal, or served with the genuine Amaretti
+            di Saronno cookies for a special occasion!
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Amaretto</h4>
+            <%= image_tag("featured/lazzaroni.jpg", alt:"Lazzaroni's Amaretto", :class => "featured") %>
+            <p><strong>Infusion ingredients:</strong> This classic liqueur is the only Amaretto made from an infusion of the famous Amaretti di Saronno cookies, rather than from an essence</p>
+            <p><strong>Tasting notes:</strong> Brilliant copper color. Complex and subtle aromas of marzipan, dried fruits, star anise, and cola nut. A smooth, velvety entry leads to a mildly sweet full body of roasted almond, marzipan, dried citrus, and complex brown spice flavors. Finishes with a long, lingering meringue, pink peppercorn, and almond fade. Great purity, complexity and style.</p>
+      casaledelgiglio:
+        link: 'http://www.casaledelgiglio.it/en'
+        0:
+          html: |-
+            <%= image_tag("winery/cantina.jpg", alt:"Casale del Giglio Winery") %>
+          caption: |-
+            The Casale Del Giglio cantina | Region: Lazio
+          quote: |-
+            Unlike other regions of Italy, this territory was still uncharted in viticultural terms when Berardino Santarelli and
+            his son Antonio launched their research project in 1985. To date, Casale del Giglio has converted its 180 hectares selecting
+            those grape varieties which have proved to interact best with the territory and produce the best quality wines.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Mater Matuta IGT</h4>
+            <%= image_tag("featured/casale.jpg", alt:"Casale del Giglio's Mater Matuta IGT", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> Syrah 85%, Petit Verdot 15% </p>
+            <p><strong>Tasting Note:</strong> A deep, dense, ruby-red wine which displays outstanding personality both on the nose and on the palate with its aroma of coffee beans, violets, ripe black cherry, coriander, nutmeg and cinnamon. Silky and seductive, but perfectly supported by fine tannins and a pleasing astringency, Mater Matuta delivers a long, lush finish. The name Mater Matuta derives from that of the ancient Italic goddess of the dawn, protectress of fertility and birth.  </p>
+            <p><strong>Awards:</strong> <i>2010 Vintage:</i>  International Wine & Spirit Competition 2014 - Silver medal</p>
+      cecchi:
+        link: 'http://cecchi.net/?lang=en'
+        0:
+          html: |-
+            <iframe width="100%" height="375" src="https://www.youtube.com/embed/PzZllyFrxEg" frameborder="0" allowfullscreen></iframe>
+          caption: |-
+            A video made by Cecchi winery. Discover "the pure truth of wine" | Region: Toscana
+          quote: |-
+            Since 1893 the Cecchi family & brand has been synonymous with viticulture, both in Italy and throughout the world. The history
+            of the winery is a compelling story of a family articulated by passion, dedication to the land, and brilliant entrepreneurial
+            spirit.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Chianti Classico Riserva Di Famiglia DOCG</h4>
+            <%= image_tag("featured/cecchi.jpg", alt:"Cecchi's Chianti Classico Riserva Di Famiglia DOCG", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> Sangiovese 90%, other grape varieties 10% </p>
+            <p><strong>Tasting Note:</strong> Chianti Classico Riserva di Famiglia is certainly the most representative wine of Cecchi. Produced only in years in which the grapes reach the quality desired, it comes from the area of Castellina in Chianti. The colour of excellent limpidity is of an intense ruby red. The aroma reveals broad and ethereal notes of ripe fruit and spices. The structure is elegant. </p>
+            <p><strong>Awards:</strong> <i> 2007 Vintage:</i> Gambero Rosso - 3 bicchieri </p>
+      vesevo:
+        link: 'http://www.farnesevini.it/vesevo_azienda'
+        0:
+          html: |-
+            <%= image_tag("winery/vesevo.jpg", alt:"Vesevo Vineyard") %>
+          caption: |-
+            Vines from the Vesevo vineyard, named after the volcano Vesuvio | Region: Campania
+          quote: |-
+            Vesevo's continued research and implementation of modern technologies is reflected in the quality of their wines, which
+            are always obtained with the respect and the full expression of the territory from which they arise.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Greco di Tufo DOCG</h4>
+            <%= image_tag("featured/vesevo.jpg", alt:"Vesevo's Greco di Tufo DOCG", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Greco </p>
+            <p><strong>Tasting Note:</strong> Bright straw yellow color. Intense aroma, quite persistent and fruity. Medium-bodied, well balanced, quite intense, and persistent</p>
+            <p><strong>Awards:</strong> <i>  2014 Vintage:</i> Sommelier Wine Awards 2015 - Bronze Medal </p>
+      rustichella:
+        link: 'http://www.rustichella.it/index.php?lang=en'
+        0:
+          html: |-
+            <iframe width="100%" height="375" src="https://www.youtube.com/embed/fYmXH4mEk40" frameborder="0" allowfullscreen></iframe>
+          caption: |-
+            A video made during Rustichella's 2014 Primograno tour. Chefs from around the world were invited and taught how to craft their
+            renowned artisinal pasta | Region: Abruzzo
+          quote: |-
+            Gianluigi and Stefania Peduzzi proudly continue their grandfather's Abruzzan tradition using only top quality durum wheat semolina,
+            bronze dies, and pure mountain water to achieve that perfect texture and taste that made Rustichella d'Abruzzo the most recognized premium
+            pasta, used by top chefs and available in all delicatessen shops of the world.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Bucatini</h4>
+            <%= image_tag("featured/rustichella.jpg", alt:"Rustichella's Bucatini", :class => "featured") %>
+            <p><strong>Ingredients:</strong>   Stone-ground duram flour from hard winter wheat and pure spring water.</p>
+            <p><strong>Tasting Note:</strong>  Slightly thicker than spaghetti, this cut has a whole down the center. Served typically in Rome with amatriciana sauce. Air dried for a full 56 hours, which creates a dense, flavorful pasta that cooks perfectly al dente, artisinal pasta at its finest.</p>
+      ferrarelle:
+        link: 'http://www.ferrarelle.it/en/home.html'
+        0:
+          html: |-
+            <%= image_tag("winery/ferrarelle.jpg", alt:"Ferrarelle Bottle Picture") %>
+          caption: |-
+            The best way to enjoy a glass of Ferrarelle is with real Italian pizza | Region:
+          quote: |-
+            Ferrarelle is Italy's n°1 sparkling water bottled directly at the source since 1893. It springs from an ancient volcanic source,
+            the extinct Roccamonfina volcano. Its natural effervescence, unique sensory profile, and elegant taste make Ferrarelle the perfect
+            complement to the flavors of outstanding cuisine.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Ferrarelle Sparkling Water</h4>
+            <%= image_tag("featured/ferrarelle.jpg", alt:"Ferrarelle's Natia Water", :class => "featured") %>
+            <p><strong>A Natural Sparkle:</strong> The natural bubbles in Ferrarelle are finer and more numerous than in water with added CO2, thus making it more delicate to the palate and giving it its characteristic taste.</p>
+            <p><strong>Tasting Note:</strong> Ferrarelle mineral water has a unique taste which is soft and fresh; its sparkle, so smooth on the palate, makes it just right from starters through to dessert, and for all menus. The natural bubbles in Ferrarelle are finer and more numerous than in water with added CO2, thus making it more delicate to the palate and giving it its characteristic taste.</p>
+      amarettidelchiostro:
+        link: 'http://www.chiostrodisaronno.it'
+        0:
+          html: |-
+            <%= image_tag("winery/chiostro.jpg", alt:"Amaretti di Saronno") %>
+          caption: |-
+            The famed Amaretti del Chiostro cookies | Region: Lombardia
+          quote: |-
+            The historic Amaretti cookies were created in the 18th century by the Lazzaroni family to celebrate the Cardinal of Milan’s visit to the
+            town of Saronno. These bittersweet almond cookies are perfect for holiday entertaining and make great gifts.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Amaretti Classici</h4>
+            <%= image_tag("featured/chiostro.jpg", alt:"Amaretti del Chiostro's Amaretti", :class => "featured") %>
+            <p><strong>Ingredients:</strong> Italian bakers craft amaretti by slowly baking a blend of sugar, apricot kernels and egg whites, resulting in a crunchy cookie that then receives a dusting of sparkling white sugar. </p>
+      planetaoliveoil:
+        link: 'http://www.planeta.it/en/olio'
+        0:
+          html: |-
+            <%= image_tag("winery/olio.jpg", alt:"Planeta Olives") %>
+          caption: |-
+            Hand-picked olives at Planeta's Caparrina oil mill | Region: Sicilia
+          quote: |-
+            The Planeta olive grove extends for 98 hectares in the Capparrina district, a natural oasis of great beauty sloping towards the sea.
+            Planeta’s decision to dedicate this land to olives was not random: it was both an ethical and aesthetic choice in order to safeguard the
+            landscape and its nature, to make the most of the land and to create employment.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Tradizionale Olio Extravergine DOP Val di Mazara</h4>
+            <%= image_tag("featured/olio.jpg", alt:"Planeta's Tradizionale Olio Extravergine DOP Val di Mazara", :class => "featured") %>
+            <p><strong>Olive Varities:</strong> Nocellara del Belice 50%, Biancolilla 30%, Cerasuola 20%</p>
+            <p><strong>Tasting note:</strong> A deep bright green color with hints of pistachio. An elegant and harmonious bouquet on the nose, with fresh mint and basil combined with an aromatic touch of sage, thyme, oregano, and juniper, together with all the typical aromas of the area, citrus flowers, artichoke, green tomato, and seaweed. The initial sensation on the palate is full, and in the mouth it is generous, fresh and pleasantly bitter at the beginning with a long and persistently spicy finish.</p>
+      vignetidelvulture:
+        link: 'http://www.farnesevini.it/vigneti_del_vulture_azienda'
+        0:
+          html: |-
+            <%= image_tag("winery/vulture.jpg", alt:"Vulture vines") %>
+          caption: |-
+            The beautiful landscape of the vulture vines. | Region: Basilicata
+          quote: |-
+            Vulture is part of a large area in the north of the Basilicata region, dominated by the austere profile of the
+            Monte Vulture, a dormant volcano. For centuries the volcanoes were experienced as a source of destruction and death,
+            today farmers are compensated for the damage caused by the eruptions of the past by being able to grow vines on land with
+            an incomparable wealth of minerals, providing these grapes with a unique complexity.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Pipoli Greco-Fiano Basilicata IGT</h4>
+            <%= image_tag("featured/vulture.jpg", alt:"Vigneti di Vulture's Pipoli Greco-Fiano Basilicata IGT", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> Greco 60% Fiano 40%</p>
+            <p><strong>Tasting Note:</strong> Yellow color with green reflections. Hints of white pulp fruit with a good acidity that enhances the wines freshness.</p>
+            <p><strong>Awards:</strong> <i>  2014 Vintage:</i> Decanter World Wine Awards 2015 - Bronze Medal </p>
+      fontanacandida:
+        link: 'http://www.cantinefontanacandida.it/en/'
+        0:
+          html: |-
+            <%= image_tag("winery/fontana.jpg", alt:"Fontana Candida winery") %>
+          caption: |-
+            Fontana Candida's bottling cellar at Monteporzio Catone. | Region: Lazio
+          quote: |-
+            For fifty years Fontana Candida has been undisputed protagonist of the diffusion and success of Frascati world-wide.
+            Its main mission has always been the enhancement of this denomination, the true wine patrimony of the Roman land, with an
+            enormous quality potential, partly still to be explored.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Frascanti Superiore</h4>
+            <%= image_tag("featured/fontana.jpg", alt:"Fontana Candida's Frascati Superiore", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong>  60% Malvasia Bianca di Candia, 30% Trebbiano Toscano, 10% Malvasia del Lazio</p>
+            <p><strong>Tasting Note:</strong> Dry white still wine, pale straw color. Delicate fragrance of wild flowers and golden delicious apples. Dry, soft and fruit forward, with a lively taste that offers notes of peach and almonds.</p>
+      castellomonaci:
+        link: 'http://www.castellomonaci.com/en/wine-experience-salento/'
+        0:
+          html: |-
+            <%= image_tag("winery/monaci.jpg", alt:"Castello Monaci Winery") %>
+          caption: |-
+            This spectacular barrel cellar holds more than 1000 barrique and 18 french-oak casks. | Region: Puglia
+          quote: |-
+            Castello Monaci wines are named after the legends and myths that recall the greek origins of the Apulia region: Medos, Kreos, Maru, Piluna, Artas and Aiace. They are made with local grapevines such as Primitivo, Negramaro, and Lecce’s Malvasia Nera.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Piluna Primitivo</h4>
+            <%= image_tag("featured/castello.jpg", alt:"Castello Monaci's Piluna Primitivo", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Primitivo</p>
+            <p><strong>Tasting Note:</strong> Castello Monaci Piluna is a vigorous red and suggestive. The color is dark purple. The olfactory bouquet is full, fruity, with notes of ripe red and black cherry jam and cherry, followed by hints of pepper and vanilla. The taste is soft and concentrated, with the final jam reminiscent of small fruits. Hot, intense and engaging, perfect for a happy evening with friends, to accompany dishes of meat, roasts, and mature cheeses.</p>
+      vignetidelsalento:
+        link: 'http://www.farnesevini.it/vigneti_del_salento_azienda'
+        0:
+          html: |-
+            <%= image_tag("winery/salento.jpg", alt:"Salento Winery") %>
+          caption: |-
+            The Apulian bush vine in Spring | Region: Puglia
+          quote: |-
+            In this special atmosphere the old grapevines lay still and silent, in the same place for almost a century. They struggle with the passing of time, drawing heat from the light and refreshment from the stone. We wonder if  it’s a miracle, or a principle of nature, but these old grapevines still offer their precious fruits, despite their struggles..
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> 'Zolla' Salice Salentino</h4>
+            <%= image_tag("featured/salento.jpg", alt:"Vigneti di Salento's 'Zolla' Salice Salentino IGP", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> Negroamaro 80% Malvasia Nera 20%</p>
+            <p><strong>Tasting Note:</strong> Very dense ruby red colour, intense aroma, fruity with hints of cherries, prune and pomegranate, spicy and herbal. Full-bodied wine, warm, tasty, with a pleasant fresh aftertaste. </p>
+            <p><strong>Awards:</strong> <i>  2012 Vintage:</i> Decanter World Wine Awards 2014 - Bronze Medal</p>
+      mutti:
+        link: 'http://www.mutti-parma.com/en'
+        0:
+          html: |-
+            <%= image_tag("winery/mutti.jpg", alt:"Mutti Tomatoes") %>
+          caption: |-
+            'A passion for tomato' | Region: Parma
+          quote: |-
+            Mutti was founded in 1899 and is now in the hands of the fourth generation of the Mutti family. We continue to believe in the values that let us become the most beloved tomato brand by Italians: a focus on quality from selection of seeds to harvest and production, attention to each step in the production process, and the passion for tomato; these are the 3 pillars of our success.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Passata al Basilico</h4>
+            <%= image_tag("featured/mutti.jpg", alt:"Mutti's Passata al Basilico", :class => "featured") %>
+            <p><strong>Tasting Note:</strong>Mutti Tomato Puree stands out thanks to its dense texture, thickness and the complete absence of peels and seeds.  They remain a brilliant red, have a velvety consistency and have a sweet flavor. They are perfect to make any quick dishes, like eggs, white meats, sauces for stuffed pasta and thin crust pizzas. </p>
+      laroncaia:
+        link: 'http://laroncaia.it'
+        0:
+          html: |-
+            <%= image_tag("winery/roncaia.jpg", alt:"La Roncaia Winery") %>
+          caption: |-
+            La Roncaia's facilities | Region: Friuli
+          quote: |-
+            This is a place for contemplation and experience accumulated during the slow passage of the seasons, where each day-to-day act takes on the sacredness of a ritual. Close to the exclusive vineyards in Cergneu di Nimis stands La Roncaia cellar, where life proceeds in complete harmony with the surroundings.
+        1:
+          html: |-
+            <h4><i> Featured Product:</i> Refosco DOC Friuli Colli Orientali</h4>
+            <%= image_tag("featured/roncaia.jpg", alt:"La Roncaia's Refosco DOC Friuli Colli Orientali", :class => "featured") %>
+            <p><strong>Grape Varieties:</strong> 100% Refosco</p>
+            <p><strong>Tasting Note:</strong> A developed, opulent nose of bramble fruit and cedar leading to notes of mocha and vanilla. Grapes are late harvested and partially dried to give concentration, texture and a velvety mouthfeel. Outstanding intensity with a long, rich finish.</p>
+            <p><strong>Awards:</strong> <i>  2010 Vintage:</i> European Decanter World Wine Award - Gold Medal; Italian Premium Regional Wine - Iconic Trophy</p>
+

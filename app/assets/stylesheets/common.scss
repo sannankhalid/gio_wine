@@ -1,0 +1,699 @@
+/*-----------------------------------------------------------------------------
+=MAIN STYLES
+-----------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Wine Glass';
+  src:  font-url('wine-glass.eot');
+  src:  font-url('wine-glass.eot?#iefix') format('embedded-opentype'),
+        font-url('wine-glass.woff') format('woff'),
+        font-url('wine-glass.ttf') format('truetype'),
+        font-url('wine-glass.svg#wine_tastingicon') format('svg');
+}
+.glyphicon-wine_tasting,
+.wine_tasting {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Wine Glass';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wine_tasting-glass:before {
+  content: "\e001";
+}
+
+body {
+  color: black;
+  /*background: rgb(228,228,197);*/
+  background-repeat: repeat-y;
+  background-position: -50px -155px;
+  padding-top: 50px;
+  font-family: 'Baskerville', 'Garamond', 'Calisto MT',  'Book Antiqua', serif;
+  height: 110%;
+}
+
+
+
+h1 {
+ font-family: 'Cinzel', serif;
+ text-align: center;
+}
+
+header {
+  background: rgba(141,32,54, 0.9);
+  color: rgb(228,228,197) !important;
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+footer {
+  margin: 20px;
+  padding:20px;
+  text-align: center;
+  display: block;
+  background-color: lightgrey; /* add a fallback color of #d6d6d6 */
+
+  margin: 0;
+
+
+}
+
+footer p {
+  font-size: 17px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+
+.round {
+  border-radius: 100px;
+}
+
+h2 {
+  font-family: 'Cinzel';
+  text-align: center;
+}
+
+.blurb hr {
+  margin-bottom: 5px;
+  margin-top: -10px;
+  margin-right: 0px;
+
+}
+
+hr {
+  margin-bottom: 10px;
+  margin-top: -5px;
+  border-color: black;
+  margin-right: 100px;
+}
+
+button {
+  color: rgba(141,32,54, 0.9) !important;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.font {
+  font-family: 'Cinzel', serif;
+}
+
+
+.big img {
+  height: 100px;
+}
+
+
+
+footer a {
+  color: black !important;
+}
+
+footer a:hover {
+  text-decoration: underline !important;
+}
+
+
+.carousel .main img {
+width: 100%;
+height: 620px !important;
+}
+
+.carousel-caption {
+  font-size: 18px;
+  font-family: 'Baskerville', 'Garamond', 'Calisto MT',  'Book Antiqua', serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  background-color: rgba(0,0,0, 0.6);
+  margin: -5px;
+}
+
+.modal-content {
+  color: black;
+}
+
+.modal-title {
+  color: rgba(141,32,54, 0.9);
+}
+/*-----------------------------------------------------------------------------
+=NAVBAR
+-----------------------------------------------------------------------------*/
+
+// trying to center nav on second navbar
+
+
+
+// .center .navbar-inner {
+//     text-align:center;
+// }
+
+// .center .dropdown-menu {
+//     text-align: left;
+// }
+
+// // .affix  {
+// //   position: fixed;
+// //    top: 0;
+// //     width: 100%;
+// // }
+
+
+// // new navbar
+// .nav-logo {
+//   display: inline-block;
+//    position: absolute;
+//     width: 100%;
+//     left: 0;
+//     text-align: center;
+//     margin: auto;
+
+// }
+
+// .nav-logo .navbar-brand img {
+//   margin: 0 auto;
+// }
+// .nav-logo img {
+//   width: 150px;
+//   height: 400%;
+
+// }
+
+// .new-nav {
+//   background-color: white;
+// }
+
+// new navbar end
+
+
+
+
+.navbar {
+  background: rgba(141,32,54, 0.9);
+  font-family: 'Cinzel', serif;
+  border: none;
+  border-radius: 0px !important;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+
+}
+
+.dropdown-menu li.active > a,
+.navbar-default .navbar-nav > li.active > a {
+  background: inherit !important;
+
+}
+
+.dropdown-menu li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:hover, {
+text-decoration: none !important;
+color: gray !important;
+}
+.dropdown-menu a {
+  background: rgba(141,32,54, 0.9);
+}
+
+.dropdown-menu {
+  padding: 0;
+}
+
+nav img {
+  width: 150px;
+  height: 400%;
+  border-radius: 30px;
+}
+
+
+/*-----------------------------------------------------------------------------
+=DIVS
+-----------------------------------------------------------------------------*/
+
+.container {
+
+  margin: 0 auto;
+}
+
+.partners {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.partners .col-sm-3 a {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 180px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.partners img {
+  width: 100%;
+}
+
+.blurb {
+  // padding: 15px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.blurb .row {
+  margin : 0px;
+}
+
+.blurb .container h3 {
+  margin-top: 0px;
+}
+
+.blurb .container .content {
+  width: 100%;
+}
+
+.blurb p {
+   font-size: 17px;
+   margin: 0px;
+}
+
+.jumbotron {
+  background: white;
+  margin-top: -50px;
+
+}
+
+.leaflet-container{
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -khtml-border-radius:10px;
+    -webkit-border-radius:10px;
+    }
+
+
+/*-----------------------------------------------------------------------------
+=IDs
+-----------------------------------------------------------------------------*/
+
+#close img {
+  margin: 0;
+  padding: -10;
+}
+
+#map {
+  height: 430px;
+  width: 100%;
+
+  color: rgba(141,32,54, 0.9);
+}
+
+#map3 {
+  height: 520px;
+  width: 580px;
+}
+
+#nospace {
+  margin-top: -30px;
+  margin-bottom: -15px;
+}
+
+.logo {
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-top: -10px;
+}
+
+#italianlink {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  color: white;
+}
+
+#brand {
+  font-size: 1.5em;
+}
+
+
+#black {
+  color: rgba(141,32,54,0.9);
+  text-decoration: bold;
+}
+
+#black:hover {
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#territory {
+  font-family: 'Cinzel';
+}
+
+#spacing {
+   letter-spacing: 2px;
+   text-align: center;
+}
+
+/*-----------------------------------------------------------------------------
+=CONTACT PAGE
+-----------------------------------------------------------------------------*/
+
+#contactbody .container {
+   background: rgba(141,32,54,0.9);
+  color: rgb(228,228,197);
+  padding-left: 30px;
+  border-radius: 10px;
+
+}
+
+#contactbody .container hr {
+  border-color: rgb(228,228,197);
+  margin-top: 10px;
+
+}
+
+#contactbody .panel-body {
+  background: rgba(141,32,54,0.9);
+  color: rgb(228,228,197);
+  padding-left: 30px;
+}
+
+#contactbody .panel {
+  border: rgba(141,32,54,0.9);
+}
+
+#contactbody .panel-heading {
+  background: rgb(141,32,54);
+  color: rgb(228,228,197);
+  padding-left: 30px;
+}
+
+#contactbody .panel-footer {
+  background: rgb(141,32,54);
+  color: rgb(228,228,197);
+  padding-left: 30px;
+}
+
+#contactbody p {
+  margin: -5px;
+  font-size: 17px;
+
+}
+
+#contactbody a {
+  text-decoration: none;
+  color: rgb(228,228,197);
+}
+
+#box {
+  padding-left: 20px;
+}
+
+.contactmain {
+  border: 1px solid rgba(141,32,54, 0.9);
+  padding: 7px;
+}
+
+.contact {
+  margin-bottom: 50px;
+}
+
+.contact img {
+  margin-bottom: 10px;
+  width: 90%;
+  // border-radius: 120px;
+}
+
+#contactbody .contact p {
+  text-align: center;
+  margin: 0px 10px;
+  padding: 0px;
+}
+
+
+
+.try {
+background-image: asset-url('bottle.jpg');
+position: relative;
+/*---WHY DOESNT THIS EFFECT WORK?^^ -----------------*/
+padding-top: 8%;
+padding-right: 0px;
+padding-bottom: 8%;
+padding-left: 0px;
+height: 200px;
+
+}
+
+.bg {
+background-image: asset-url('bottle.jpg');
+background-repeat: no-repeat;
+background-position: 50% 0px;
+height: 200px;
+-moz-transition: all 0.3s ease-out;
+-ms-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+-webkit-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+.contact1 {
+  background-color: red;
+}
+
+.team {
+  margin: 0px 30px;
+}
+
+.team p {
+  text-decoration: bold;
+}
+
+/*-----------------------------------------------------------------------------
+=MODAL
+-----------------------------------------------------------------------------*/
+
+.modal {
+  color: rgba(141,32,54, 0.9);
+  z-index: 9999999;
+}
+
+.modal-body p {
+  font-size: 15px;
+}
+
+.modal-body a {
+  text-decoration: none;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+.modal-body img.center1 {
+  margin: 0 auto;
+}
+
+.modal-body img {
+  width: 100%;
+  padding-bottom: 15px;
+
+}
+
+.modal-body .caption {
+  font-size: 17px !important;
+}
+
+.modal-footer img {
+  height: 50px;
+  float: left;
+}
+
+
+/*-----------------------------------------------------------------------------
+=WINE PAGE
+-----------------------------------------------------------------------------*/
+#winebody .blurb {
+  padding: 10px;
+}
+
+#winebody .modal img {
+  padding-bottom: 0px;
+}
+
+
+.caption {
+  color: black;
+  font-style: italic;
+}
+
+#the_wines p:hover {
+  // text-decoration: underline;
+  cursor: pointer;
+}
+
+#the_foods p:hover {
+  // text-decoration: underline;
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------
+=DIVS
+-----------------------------------------------------------------------------*/
+
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
+  border-bottom: 1px solid rgba(141,32,54, 0.9);
+}
+
+
+.box {
+  background: rgb(228,228,197);
+  border: 2px solid rgba(141,32,54, 0.9);
+}
+
+.panel-footer .main_office {
+  display: block;
+}
+
+.panel-footer .other_offices {
+  display: block;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------
+=HOVERMASTER
+-----------------------------------------------------------------------------*/
+
+/* Sink */
+.hvr-sink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+
+/* Underline Reveal */
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: gray;
+  // <--here ^^-->
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center.hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+.modal-backdrop {
+  z-index: 1002;
+}
+
+@media (max-width: 991px) {
+    .jumbotron {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

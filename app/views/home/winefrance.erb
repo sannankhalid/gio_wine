@@ -1,0 +1,198 @@
+<!-- <div class="try">
+</div> -->
+
+
+<!-- /TRYING -->
+<!-- <div class="bg" data-zero="background" data-fivehundred="background-position:50%">
+</div>
+-->
+
+
+
+<div class="jumbotron">
+  <div class="blurb">
+      <div class="container">
+          <div class="col-md-5 seventeen">
+                        <br>
+              <h2>wine</h2>
+              <p>As of 2012, Giowine collaborates with onsite partners to offer the taste of innumerable appellations within the regions of Bordeaux, Cahors, Champagne, and the Rhone Valley.  Each chateau/producer brings its own expression to established regional grape varieties and distinct appellation terroir.  We offer an extensive and representative variety of wines in terms of style and prestige that allow for considerable adaptation for each of our markets. Please explore our map to learn more about each particular French region we work in.
+              </p>
+              <br>
+              <br>
+            <div id="french_wines" class="row font">
+                <p class="hvr-underline-from-center" data-name="bordeaux" >Bordeaux</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="cahors" >Cahors</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="champagne" >Champagne</p>
+                <br>
+                <p class="hvr-underline-from-center" data-name="rhonevalley" >Rhone Valley</p>
+               
+    
+                
+              </div>
+          </div>
+          <div class="col-md-7">
+            <div id="map3"></div><!-- /MAP-->
+            <caption> <div id="spacing"><i>Each marker on this map of France represents a region from which we sell a variety of wines.</i></div>
+          </div>
+
+
+
+  <!--Modals-->
+
+      <% modals = [
+        { id:   'bordeaux',
+          title:'BORDEAUX',
+          body:[{
+            html: %W(
+              #{image_tag("winery/bordeaux.jpg", alt:"Planeta Winery", :class =>"full")}
+              ).join(' '),
+caption: "Grands Crus of Bordeaux",
+quote: "Bordeaux’s world famous refined, powerful reds from Médoc, the crisp, refreshing whites from Graves, the honey-sweet golden whites of Sauternes, elegant, well rounded Saint Emilion and Pomerol are among our GioWines. From good value for money petits chateaux to the most coveted and prestigious Grands Crus, we are delighted to share with you the tremendous variety Bordeaux has to offer. We invite you to explore the Bordeaux’s official wine website to learn more about the regions, assemblages, and flavors that are so acclaimed in the world of wine."
+}],
+
+logo:{
+  src: 'brands/bdxb.jpg',
+  alt: 'CIVB logo'
+},
+link:'http://www.bordeaux.com/us'
+},
+{ id:   'cahors',
+  title:'CAHORS',
+  body:[{
+    html: %W(
+      #{image_tag("winery/cahors.jpg", alt:"Chateau de Mercues", :class =>"full")}
+      ).join(' '),
+caption: "The picturesque Château de Mercuès in the Cahors appellation",
+quote: "Discover Malbec from the pioneer of Cahors wine, Georges Vigouroux: their properties Chateau Mercuès and Chateau Haut Serre, among their other products, express the quintessential flavors of Malbec grown in its birthplace of Cahors. The elegant black cherry and subtle spices of the historically termed “black wine” takes on a new mineral flavor brought by the extremely rare blue clay found several meters beneath their plots at Chateau Haut Serre. Even other varieties not typical of the Cahors apellation--Chardonnay and Chenin Blanc--find remarkable and unexpected character. We invite you to visit the Cahors official wine website to learn more about the regions, grape varieties, and flavors of this especially diverse terroir." 
+}],
+logo:{
+  src: 'brands/vigouroux.jpg',
+  alt: 'Georges Vigouroux logo'
+},
+link:'http://www.g-vigouroux.fr/index.php?lang=en'
+},
+{ id:   'champagne',
+  title:'CHAMPAGNE',
+  body:[{
+    html: %W(
+      #{image_tag("winery/champagne.jpg", alt:"Cattier champagne maturation", :class =>"full")}
+      ).join(' '),
+caption: "Maschio's 2012 commercial for their Pinot Rosa wine, giving tasters a \"sparkling moment\" | Region: Veneto",
+quote: "GioWine is ambassador of the Maison Cattier, producers owners of Champagne vineyards since 1763, including the rare and celebrated Clos du Moulin plot acquired in 1951. Like other wine producing regions in France, vines in the Champagne are traced back to Ancient Roman times.  This deep history can be felt in the complex, floral, fruity, autolytic, brut or demi-sec sparkle result of a long and careful production process--from double fermentation to riddling and disgorgement--a tradition kept alive and emulated throughout the world. For post production, the Maison Cattier’s cellars, among the deepest in Champagne, allow storage 30 meters underground for prime temperature and aging conditions of their premier cru wines. We invite you to learn more about the Maison Cattier and Champagne wines by visiting their site." 
+}],
+logo:{
+  src: 'brands/cattier.jpg',
+  alt: 'Cattier logo'
+},
+link:'http://www.cattier.com/'
+},
+# { id:   'burgundy',
+#   title:'BURGUNDY',
+#   body:[{
+#     html: %W(
+#       #{image_tag("winery/mazzei.jpg", alt:"Mazzei Winery", :class =>"full")}
+#       ).join(' '),
+# caption: "The Mazzei vineyards are visible from the village of Gelso | Region: Toscana",
+# quote: "Today, after almost <strong>six centuries</strong>, the Mazzei family still devotes itself to winemaking, with constant commitment, an eye towards innovation, and an abiding respect for the land."
+# }],
+# logo:{
+#   src: 'brands/mazzei.png',
+#   alt: 'Mazzei logo'
+# },
+# link:'http://www.mazzei.it/eng_intro/no_intro:1'
+# },
+{ id:   'rhonevalley',
+  title:'RHONE VALLEY',
+  body:[{
+    html: %W(
+      #{image_tag("winery/rhone.jpg", alt:"Chateau Raspail", :class =>"full")}
+      ).join(' '),
+caption: "The beautiful Château Raspail in the Gigondas appellation of Rhone",
+quote: "GioWine offers a taste of Southern Rhone Valley among which Chateauneuf du Pape, Gigondas, and Côte du Rhone Plan de Dieu. Experiment the great diversity this wine region has to offer: covering over 6 french deparments, the Rhone valley has numerous microclimates, soil types, and accordingly many grape varities. You’ll find in GioWine the typical Syrah and Grenache blends to the Red Terret and Vaccarèse also found in key apellations of the Côtes du Rhone, in both crus and village wines.  We invite you to visit the Rhone Valley official wine website to learn more about the regions, grape varieties, and flavors of this especially diverse terroir."
+}],
+logo:{
+  src: 'brands/rhone.png',
+  alt: 'Rhonewines.com'
+},
+link:'http://www.rhone-wines.com/'
+},
+
+] %>
+
+<% modals.each do |modal| %>
+<div class="modal fade" id="<%= modal[:id] %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel"><%= modal[:title] %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-7">
+              <% modal[:body].each_with_index do |item, index| %> 
+              <%= item[:html].html_safe %>
+            <p class="caption">
+              <%= item[:caption] %>
+            </p>
+          </div>
+           <div class="col-md-5">
+              <blockquote>
+                  <p>
+                    <%= item[:quote] %>
+                  </p>
+                </blockquote>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <%= image_tag modal[:logo][:src], alt: modal[:logo][:alt] %>
+        <a href="<%= modal[:link] %>" target="_blank">
+          <button type="button" class="btn btn-default">
+            View Website
+          </button>
+        </a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<% end %>
+
+
+
+
+      </div><!-- /container-->
+  </div><!-- /blurb-->
+</div><!-- /jumbotron-->
+
+           
+    
+
+
+
+
+
+
+<%= stylesheet_link_tag '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css',
+'leaflet.awesome-markers',
+'bootstrap-modal-carousel',
+'winefrance',
+media: 'all' %>
+<%= javascript_include_tag  '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js',
+'leaflet.awesome-markers',
+'leaflet.smoothmarkerbouncing',
+'underscore-min',
+'bootstrap-modal-carousel',
+'winefrance',
+media: 'all' %>

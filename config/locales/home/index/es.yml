@@ -1,0 +1,39 @@
+es:
+  index:
+    carousel:
+      previous: previous
+      next: next
+      vicepresident: Vice President Ricardo March explains Fantinel's wines to curious tasters
+      chilling: Chilling bottles for a wine dinner at Valentino restaurant in Las Vegas
+      italianwine: "Italian wine event hosted by GioWine & Varela Hermanos at American Trade Hotel in Panama"
+      giovisits: "GioWine visits supplier Masi Tupungato in Mendoza, Argentina"
+      batabarbe: Batasiolo's Barbera d'Alba
+      cecchivaldel: "Cecchi's Val delle Rose (Valley of Roses) vineyard in Maremma, Tuscany"
+      harvest: Harvest time for Casanova di Neri
+    ouroffices: our offices
+    amap: A map of our six offices throughout the American continents.
+    aboutus: about us
+    about_1: |-
+      GioWine was founded in 2000 by Giovanni Cardullo as an International Consulting
+      Firm specializing in representing fine Italian wine. With offices in 5 countries,
+      our onsite representatives provide you international experience and networks across
+      the Americas.
+    about_2: |-
+      We cultivate continuing contact between suppliers and clients to foster reliable
+      and dynamic relationships. We work with genuine enthusiasm to develop brands and
+      product sales internationally at a highly personal and technical level from the
+      producer to the final consumer.
+    about_3: |-
+      GioWine is the only team specialized in Italian wine to cover uninterrupted territory
+      <a data-toggle="modal" data-target="#myModal" id="black" class="hvr-underline-from-center">
+      from Alaska to Tierra del Fuego!</a>
+    ourpartners: our partners
+    modal:
+      wepromote: "We promote fine Italian products in the following 45 countries:"
+      body: |-
+        <p>• <strong>North America:</strong> Canada, United States</p>
+        <p>• <strong>Central America:</strong> Mexico, Belize, Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua, Panama</p>
+        <p>• <strong>Caribbean:</strong> Antigua & Barbuda, Aruba, Bahamas, Barbados, Bermuda, British Virgin Islands, Cayman Islands, Cuba, Curacao, Dominica, Dominican Republic, Grenada, Haiti, Martinique, Netherlands Antilles, Puerto Rico, Saint Lucia, Saint Martin, Saint Thomas, Trinidad & Tobago, Turks & Caicos, U.S. Virgin Islands</p>
+        <p>• <strong>South America:</strong> Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Guyana, Paraguay, Peru, Suriname, Uruguay, Venezuela </p>
+        <p>• <strong>Asia:</strong> China</p>
+      close: Close

@@ -1,0 +1,175 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active main">
+      <%= image_tag("carousel/panama.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.vicepresident') %>
+      </div>
+    </div>
+    <div class="item main">
+      <%= image_tag("carousel/blackandwhite.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.chilling') %>
+      </div>
+    </div>
+    <div class="item main">
+      <%= image_tag("carousel/panama2.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.italianwine') %>
+      </div>
+    </div>
+    <div class="item main">
+      <%= image_tag("carousel/mendoza1.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.giovisits') %>
+    </div>
+    </div>
+    <div class="item main">
+      <%= image_tag("carousel/corks.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.batabarbe') %>
+      </div>
+    </div>
+     <div class="item main ">
+      <%= image_tag("carousel/val_delle_rose.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.cecchivaldel') %>
+      </div>
+    </div>
+     <div class="item main">
+      <%= image_tag("carousel/neri_grapes.jpg") %>
+      <div class="carousel-caption">
+        <%= t('index.carousel.harvest') %>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only"><%= t('index.carousel.previous') %></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only"><%= t('index.carousel.next') %></span>
+  </a>
+</div>
+
+
+<div class="jumbotron">
+  <div class="blurb">
+    <div class="row">
+      <div class="col-md-6">
+        <h2><%= t('index.ouroffices') %></h2>
+        <hr>
+        <div id="map"></div>
+        <caption>
+          <div id= "spacing">
+            <i><%= t('index.amap') %></i>
+          </div>
+        </caption>
+      </div><!-- .col-md-6 -->
+      <div class="col-md-6">
+          <h2><%= t('index.aboutus') %></h2>
+          <hr>
+          <div class="content">
+            <p>
+              <%= t('index.about_1') %>
+            </p>
+            <br>
+            <p>
+              <%= t('index.about_2') %>
+            </p>
+            <br>
+            <p class="bold">
+              <%= raw t('index.about_3') %>
+            </p>
+          </div>
+      </div><!--end column-->
+    </div><!--end row-->
+  </div><!--end .blurb-->
+  <div class="blurb">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><%= raw t('index.ourpartners') %></h2>
+        <hr>
+      </div>
+    </div>
+    <div class="partners" id="close">
+      <div class="flexrow center">
+        <% brands = [
+          {name:'Batasiolo', img:'brands/batasiolo.jpg', url:'http://www.batasiolo.com/'},
+          {name:'Casale del Giglio', img:'brands/casale.jpg', url:'http://www.casaledelgiglio.it/en/'},
+          {name:'Casanova Di Neri', img:'brands/casanova.png', url:'http://www.casanovadineri.it/'},
+          {name:'Castello Monaci', img:'brands/monaci.jpg', url:'http://www.castellomonaci.com/en/wine-experience-salento/'},
+          {name:'Cecchi', img:'brands/cecchi.jpg', url:'http://cecchi.net/'},
+          {name:'Fantinel', img:'brands/fantinel.png', url:'http://www.fantinel.com/'},
+          {name:'Farnese', img:'brands/farnese.png', url:'http://www.farnesevini.it/'},
+          {name:'Fontana Candida', img:'brands/fontana.jpg', url:'http://www.cantinefontanacandida.it/en/'},
+          {name:'Maschio', img:'brands/maschio.png', url:'http://www.cantinemaschio.it/'},
+          {name:'Masi', img:'brands/masi.png', url:'http://www.masi.it/'},
+          {name:'Mazzei', img:'brands/mazzei.jpg', url:'http://www.mazzei.it/'},
+          {name:'Planeta', img:'brands/planeta.png', url:'http://www.planeta.it/'},
+          {name:'Riunite', img:'brands/riunite.png', url:'http://www.riunite.com/'},
+          {name:'Lazzaroni', img:'brands/lazzaroni.jpg', url:'http://www.lazzaronisaronno.com/'},
+          {name:'Crus et Prestige', img:'brands/cetp.png', url:'http://crus-et-prestige.com/'},
+          {name:'Vigouroux', img:'brands/vigouroux.jpg', url:'http://www.g-vigouroux.fr/'},
+          {name:'Cattier', img:'brands/cattier.jpg', url:'http://www.cattier.com/'},
+          {name:'Ferrarelle', img:'brands/ferrarelle.png', url:'http://www.ferrarelle.it/lazienda/il-mondo-di-ferrarelle-s.p.a.html'},
+          {name:'Mutti', img:'brands/mutti.jpg', url:'http://www.mutti-parma.com/en'},
+          {name:'Rustichella', img:'brands/rustichella.png', url:'http://rustichella.it/index.php?lang=it'},
+          ]
+        %>
+        <% brands.each do |brand| %>
+          <div class="element">
+            <a href="<%= brand[:url] %>" target="_blank">
+              <%= image_tag(brand[:img], alt: brand[:name], width:180) %>
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div><!-- /.companies -->
+</div><!-- /.jumbotron -->
+
+
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= t('index.modal.wepromote') %></h4>
+      </div>
+      <div class="modal-body">
+        <%= raw t('index.modal.body') %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t('index.modal.close') %></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<%= stylesheet_link_tag '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css',
+                        'index',
+                        'leaflet.awesome-markers',
+                        media: 'all' %>
+<%= javascript_include_tag  '//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js',
+                            'leaflet.smoothmarkerbouncing',
+                            'underscore-min',
+                            'index',
+                            media: 'all' %>

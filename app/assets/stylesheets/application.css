@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *
+ *= require bootstrap
+ *= require common
+ *= require_self
+ */
+
+#header {
+  background-color: white;
+  width: 100%;
+  z-index: 1001;
+  margin-bottom: 10px;
+
+
+}
+
+#header nav {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+
+.fixed {
+  position: fixed;
+  top: 0px;
+}
+
+.big {
+  text-align: center;
+  height: 100px;
+  font-size: 2em;
+}
+
+.big img {
+  height: 130px;
+  margin: -30px;
+}
+
+.big p {
+  font-size: 16px;
+  color: rgb(0,120,12);
+  margin-top: -25px;
+  letter-spacing: 4px;
+  font-style: italic;
+  font-style: bold;
+}
+
+.small {
+  height: 50px;
+  display: none;
+  text-align: center;
+
+
+}
+
+
+
+.small img {
+  height: 70px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+
+}
+
+.fixed .big {
+  display: none;
+}
+
+.fixed .small {
+  display: block;
+
+}
+
+.flexrow {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: baseline;
+  -webkit-align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100%;
+
+}
+
+.flexrow.center {
+  -webkit-justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+article {
+  width: 100%
+}
+
+.element {
+  min-height: 20px;
+  background-color: white;
+
+  text-align: center;
+}
+
+.element a {
+  font-family: Cinzel, Georgia;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgba(141,32,54, 0.9);
+}
+
+.element a:hover {
+  text-decoration: none;
+}
+
+.element a.active {
+  color: grey;
+}
+
+.hvr-underline-from-center.active {
+  -webkit-transform: none;
+          transform: none;
+}
+
+#saracontent {
+  padding-top: 15px;
+}
+
+.name {
+  color: #47525E;
+  font-weight: light;
+  font-size: 1.5em;
+  text-transform: uppercase
+}
+
+.logo_small {
+  text-align: center;
+  padding-top: 10px;
+ display: inline-block;
+ padding-bottom: 10px;
+ padding-left: 60px;
+
+
+}
+
+.socialsmall {
+font-size: 25px;
+text-align: right;
+float: right;
+padding-right: 30px;
+padding-top: 10px;
+display: inline-block;
+}
+
+.social {
+  text-align: right;
+  padding-right: 30px;
+  margin-top: -50px;
+  margin-bottom: 10px;
+  color: grey;
+  font-size: 25px;
+}

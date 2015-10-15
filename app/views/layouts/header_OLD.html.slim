@@ -1,0 +1,42 @@
+header
+  //Navbar
+  nav.navbar.navbar-default.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed type="button" toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        ul.nav.navbar-nav.navbar-left
+          li.logo
+            a.navbar-brand href="#{root_path}" = image_tag("vrais_logo.png", :alt => "Giowine")
+          li#italianlink The Italian link to the Americas <span class="glyphicon glyphicon-globe" aria-hidden="true">
+      //Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav.navbar-right
+          li class="#{'active' if request.fullpath == wine_path}"
+            a href="#{wine_path}"
+              | Products
+          li.dropdown
+            a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-expanded="false"
+              | News & Events
+            ul.dropdown-menu role="menu"
+              li class="#{'active' if request.fullpath == press_path}"
+                a href="#{press_path}" In the Press
+              li class="#{'active' if request.fullpath == news_path}"
+                a href="#{news_path}" = "What's New"
+              li class="#{'active' if request.fullpath == calendar_path}"
+                a href="#{calendar_path}" Calendar
+          li class="#{'active' if request.fullpath == contact_path}"
+            a href="#{contact_path}"
+              | Contact
+          li
+            a href="#"
+              | Español
+
+
+
+
+              
+  

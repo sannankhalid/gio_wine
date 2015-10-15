@@ -1,0 +1,32 @@
+
+<div class="container center">
+  <h2 class="bold">Check out Giowine in the Press</h2>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    Oldest on the bottom as you scroll (10 per page then you click next?)
+
+
+    <div class="box panel panel-default masonry-brick">
+      <%= image_tag('test/test.jpg', alt: 'test') %>
+      <div class="panel-body">
+        <strong>Title </strong><br>
+        Date and Source
+      </div>
+    </div>
+
+    <div class="box panel panel-default masonry-brick">
+      <%= image_tag('test/test.jpg', alt: 'test') %>
+      <div class="panel-body">
+        <p>
+          When you click on these they will become modals.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= stylesheet_link_tag 'press',    media: 'all' %>
+<%= javascript_include_tag 'press', media: 'all' %>

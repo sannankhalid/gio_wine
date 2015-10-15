@@ -1,0 +1,35 @@
+<div id="header">
+    <div class="social">
+      <a href="https://www.facebook.com/pages/Giowine/238955622585?fref=ts" target="_blank"><i class="fa fa-facebook-square"></i></a>
+    </div>
+  <div class="big">
+    <%= link_to root_path(locale: I18n.locale) do %> <%= image_tag('the_big_logo_compress.png', alt: 'Giowine logo') %> <% end %>
+    <p class="center"><%= t('header.italianlink') %></p>
+  </div>
+  <div class="small">
+    <div class="socialsmall">
+      <a href="https://www.facebook.com/pages/Giowine/238955622585?fref=ts" target="_blank"><i class="fa fa-facebook-square"></i></a>
+    </div>
+    <div class="logo_small">
+      <%= link_to root_path(locale: I18n.locale) do %> <%= image_tag('small_logo_compress.png', alt: 'Giowine logo') %> <% end %>
+    </div>
+  </div>
+  <nav>
+    <div class="flexrow center">
+      <div class="element">
+          <%= link_to t('header.home'), root_path(locale: I18n.locale), :class => "hvr-underline-from-center #{'active' if request.fullpath == root_path }" %>
+        </div>
+      <div class="element">
+       <%= link_to t('header.products'), wine_path(locale: I18n.locale), :class => "hvr-underline-from-center #{'active' if request.fullpath == wine_path }" %>
+      </div>
+      <div class="element">
+         <%= link_to t('header.contact'), contact_path(locale: I18n.locale), :class => "hvr-underline-from-center #{'active' if request.fullpath == contact_path }"  %>
+      </div>
+      <div class="element">
+        <%= link_to ({en:'Español', es:'English'}[I18n.locale]), url_for(locale:{en: :es, es: :en}[I18n.locale]), :class => "hvr-underline-from-center" %>
+      </div>
+
+    </div>
+  </nav>
+</div>
+

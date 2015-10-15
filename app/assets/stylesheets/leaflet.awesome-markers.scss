@@ -1,0 +1,20 @@
+@import 'leaflet.awesome-markers/leaflet.awesome-markers.scss';
+
+/* Marker setup */
+.awesome-marker {
+  background-image: image-url('awesome_markers/markers-soft.png');
+}
+.awesome-marker-shadow {
+  background-image: image-url('awesome_markers/markers-shadow.png');
+}
+
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+ .awesome-marker {
+  background-image: image-url('awesome_markers/markers-soft@2x.png');
+ }
+ .awesome-marker-shadow {
+  background-image: image-url('awesome_markers/markers-shadow@2x.png');
+ }
+}
